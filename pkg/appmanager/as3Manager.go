@@ -19,11 +19,12 @@ type as3Template string
 type as3Declaration string
 
 type serviceName string
+type poolName string
 type appName string
 type tenantName string
 
 type pool []Member
-type tenant map[appName][]serviceName
+type tenant map[appName][]poolName
 type as3Object map[tenantName]tenant
 
 //Rest client creation for big ip
@@ -133,17 +134,17 @@ func getClass(obj interface{}) string {
 // Object.
 // cis.f5.com/as3-tenant=<Tenant Name>
 // cis.f5.com/as3-app=<Application Name>
-// cis.f5.com/as3-service=<AS3 Service Name>
+// cis.f5.com/as3-pool=<Pool Name>
 // When a match is found, returns Node's Address and Service NodePort as pool members, if Controller is running in
 // NodePort mode, else by default ClusterIP Address and Port are returned.
-func (appMgr *Manager) getEndpointsForAS3Service(tenant tenantName, app appName, as3Svc serviceName) pool {
+func (appMgr *Manager) getEndpointsForPool(tenant tenantName, app appName, pool poolName) pool {
 	tenantKey := "cis.f5.com/as3-tenant="
 	appKey := "cis.f5.com/as3-app="
-	serviceKey := "cis.f5.com/as3-service="
+	poolKey := "cis.f5.com/as3-pool="
 
 	selector := tenantKey + string(tenant) + "," +
 		appKey + string(app) + "," +
-		serviceKey + string(as3Svc)
+		poolKey + string(pool)
 
 	svcListOptions := metaV1.ListOptions{
 		LabelSelector: selector,
