@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/F5Networks/k8s-bigip-ctlr.svg?branch=master)](https://travis-ci.org/F5Networks/k8s-bigip-ctlr) [![Slack](https://f5cloudsolutions.herokuapp.com/badge.svg)](https://f5cloudsolutions.herokuapp.com) [![Coverage Status](https://coveralls.io/repos/github/F5Networks/k8s-bigip-ctlr/badge.svg?branch=HEAD)](https://coveralls.io/github/F5Networks/k8s-bigip-ctlr?branch=HEAD)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fssurenr%2Fk8s-bigip-ctlr.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fssurenr%2Fk8s-bigip-ctlr?ref=badge_shield)
 
 F5 BIG-IP Controller for Kubernetes
 ===================================
@@ -86,3 +87,7 @@ make all test
 ```
 
 To make changes to vendor dependencies, see [Devel](DEVEL.md)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fssurenr%2Fk8s-bigip-ctlr.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fssurenr%2Fk8s-bigip-ctlr?ref=badge_large)
