@@ -1,3 +1,8 @@
+FROM golang AS builder
+ENV CGO_ENABLED 0
+
+RUN go get github.com/go-delve/delve/cmd/dlv
+
 FROM python:2.7-slim-stretch
 
 ENV APPPATH /app
@@ -24,6 +29,7 @@ COPY bigip-virtual-server_v*.json $APPPATH/vendor/src/f5/schemas/
 COPY as3-schema-3.11.0-3-cis.json $APPPATH/vendor/src/f5/schemas/
 COPY k8s-bigip-ctlr $APPPATH/bin
 COPY VERSION_BUILD.json $APPPATH/vendor/src/f5/
+COPY --from=builder /go/bin/dlv /app/bin
 
 USER ctlr
 

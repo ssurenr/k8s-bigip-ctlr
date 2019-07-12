@@ -70,7 +70,7 @@ go_install () {
   # Declare seperate from assign, so failures aren't maked by local
   local BUILDDIR
   BUILDDIR=$(get_builddir)
-  local GO_BUILD_FLAGS=( -v -ldflags "-extldflags \"-static\" -X main.version=${BUILD_VERSION} -X main.buildInfo=${BUILD_INFO}" )
+  local GO_BUILD_FLAGS=( -v -gcflags "all=-N -l" -ldflags "-extldflags \"-static\" -X main.version=${BUILD_VERSION} -X main.buildInfo=${BUILD_INFO}" )
 
   mkdir -p "$BUILDDIR"
   (
