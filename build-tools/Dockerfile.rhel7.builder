@@ -2,7 +2,7 @@ FROM registry.redhat.io/rhel7
 
 # GOLANG install steps
 
-ENV GOLANG_VERSION 1.11.1
+ENV GOLANG_VERSION 1.13
 ENV GOLANG_SRC_URL https://golang.org/dl/go$GOLANG_VERSION.src.tar.gz
 ENV GOLANG_SRC_SHA256 558f8c169ae215e25b81421596e8de7572bd3ba824b79add22fba6e284db1117
 
