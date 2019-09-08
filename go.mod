@@ -9,7 +9,7 @@ require (
 	github.com/beorn7/perks v0.0.0-20160804104726-4c0e84591b9a
 	github.com/blang/semver v3.5.1-0.20170202183821-4a1e882c79dc+incompatible
 	github.com/davecgh/go-spew v0.0.0-20151105211317-5215b55f46b2
-	github.com/docker/distribution v2.4.0-rc.1.0.20160419170423-cd27f179f2c1+incompatible
+	github.com/docker/distribution v2.4.0+incompatible
 	github.com/docker/libtrust v0.0.0-20160708172513-aabc10ec26b7
 	github.com/emicklei/go-restful v1.1.4-0.20161212084525-09691a3b6378
 	github.com/exponent-io/jsonpath v0.0.0-20151013193312-d6023ce2651d
